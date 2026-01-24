@@ -1,7 +1,10 @@
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 import { connectDB } from "@/lib/mongodb";
 import Book from "@/lib/models/Book";
-import mongoose from "mongoose";
 
 export async function GET(
   _req: Request,
