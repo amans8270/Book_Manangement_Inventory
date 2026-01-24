@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "email": "unclebob@cleancode.com",
+    "age": 70,
+    "publisher": "Prentice Hall",
+    "publishedDate": "2008-08-11",
+    "description": "A handbook of agile software craftsmanship that teaches how to write clean, maintainable code."
+  },
+  {
+    "id": "2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "email": "andrew.hunt@pragprog.com",
+    "age": 60,
+    "publisher": "Addison-Wesley",
+    "publishedDate": "1999-10-30",
+    "description": "Classic book covering practical programming techniques and career advice for software developers."
+  },
+  {
+    "id": "3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "email": "kyle.simpson@ydkjs.com",
+    "age": 45,
+    "publisher": "O'Reilly Media",
+    "publishedDate": "2020-01-28",
+    "description": "Deep dive into JavaScript core mechanisms including scope, closures, and async behavior."
+  },
+  {
+    "id": "4",
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "email": "douglas.crockford@js.org",
+    "age": 72,
+    "publisher": "O'Reilly Media",
+    "publishedDate": "2008-05-15",
+    "description": "A focused look at the strengths of JavaScript and how to avoid its problematic features."
+  },
+  {
+    "id": "5",
+    "title": "Design Patterns",
+    "author": "Erich Gamma",
+    "email": "erich.gamma@designpatterns.com",
+    "age": 62,
+    "publisher": "Addison-Wesley",
+    "publishedDate": "1994-10-21",
+    "description": "Foundational book introducing reusable object-oriented design"
+  },
+  {
+    "id": "1769243850751",
+    "title": "Testing",
+    "author": "AmanS",
+    "email": "amans8270@gmail.com",
+    "age": 27,
+    "publisher": "DCWorld",
+    "publishedDate": "1998-11-23",
+    "description": "TestingPhase"
+  }
+]
