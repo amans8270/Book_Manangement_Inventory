@@ -1,15 +1,5 @@
 [
   {
-    "id": "1",
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "email": "unclebob@cleancode.com",
-    "age": 70,
-    "publisher": "Prentice Hall",
-    "publishedDate": "2008-08-11",
-    "description": "A handbook of agile software craftsmanship that teaches how to write clean, maintainable code."
-  },
-  {
     "id": "2",
     "title": "The Pragmatic Programmer",
     "author": "Andrew Hunt",

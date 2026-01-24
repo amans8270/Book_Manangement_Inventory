@@ -17,9 +17,7 @@ export default function BookTable({
 
     if (!confirmDelete) return;
 
-    const res = await fetch(`/api/books/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(`/api/books/${id}`, { method: "DELETE" });
 
     if (!res.ok) {
       alert("Failed to delete book");
@@ -41,7 +39,8 @@ export default function BookTable({
     <div className="bg-white text-gray-800 rounded-lg shadow overflow-hidden">
       <table className="w-full text-sm">
         <thead className="bg-gray-50 text-gray-700">
-         <tr className="border-t hover:bg-gray-50 text-gray-800">
+          <tr>
+            <th className="p-3 text-left">S.No.</th>
             <th className="p-3 text-left">Title</th>
             <th className="p-3 text-left">Author</th>
             <th className="p-3 text-left">Publisher</th>
@@ -56,9 +55,13 @@ export default function BookTable({
                 index % 2 === 0 ? "bg-white" : "bg-gray-50/50"
               }`}
             >
+              {/* Serial Number */}
+              <td className="p-3">{index + 1}</td>
+
               <td className="p-3 font-medium">{book.title}</td>
               <td className="p-3">{book.author}</td>
               <td className="p-3">{book.publisher}</td>
+
               <td className="p-3 text-right space-x-3">
                 <Link
                   href={`/books/${book.id}`}

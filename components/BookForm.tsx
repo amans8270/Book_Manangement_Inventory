@@ -43,7 +43,7 @@ export default function BookForm({
     );
     setToastErrors(messages);
   };
-const inputClass = (field: string) =>
+const inputClass = (field: keyof typeof errors) =>
   `border p-2 w-full rounded text-gray-900 bg-white placeholder-gray-400 ${
     errors[field]
       ? "border-red-500 focus:ring-red-500"
