@@ -1,5 +1,5 @@
 export interface Book {
-  id: string;
+  _id: string;          // MongoDB ID
   title: string;
   author: string;
   email: string;

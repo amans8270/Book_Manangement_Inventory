@@ -1,14 +1,20 @@
 import { NextResponse } from "next/server";
-import { readBooks, writeBooks } from "@/lib/jsonDb";
+import { connectDB } from "@/lib/mongodb";
+import Book from "@/lib/models/Book";
+import mongoose from "mongoose";
 
 export async function GET(
   _req: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
-  const books = readBooks();
 
-  const book = books.find(b => b.id === id);
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
+  }
+
+  await connectDB();
+  const book = await Book.findById(id);
 
   if (!book) {
     return NextResponse.json({ error: "Book not found" }, { status: 404 });
@@ -22,14 +28,13 @@ export async function DELETE(
   context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
-  const books = readBooks();
 
-  const filtered = books.filter(b => b.id !== id);
-
-  if (filtered.length === books.length) {
-    return NextResponse.json({ error: "Book not found" }, { status: 404 });
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
   }
 
-  writeBooks(filtered);
+  await connectDB();
+  await Book.findByIdAndDelete(id);
+
   return NextResponse.json({ message: "Book deleted" });
 }
